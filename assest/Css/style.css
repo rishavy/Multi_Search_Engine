@@ -61,17 +61,18 @@ h1{
 }
 .btn-animation::before,
 .btn-animation::after{
+    /* border: 1px solid black; */
     position: absolute;
     content: "";
     width: 150%;
-    left: 30%;
-    height: 100%;
+    left: 50%;
+    height: 70%;
     transform: translateX(-50%);
     z-index: -1000;
     background-repeat: no-repeat;
 }
 .btn-animation::before{
-    top: 70%;
+    top: -25%;
     background-image: radial-gradient(circle, #008cff 20%, transparent 20%),
     radial-gradient(circle, transparent 20%, #40a9ff 20%, transparent 30%),
     radial-gradient(circle, #008cff 20%, transparent 20%),
@@ -101,7 +102,7 @@ h1{
     }
 }
 .btn-animation .animate::after{
-    bottom: -70%;
+    bottom: 50%;
     background-image: radial-gradient(circle, #008cff 20%, transparent 20%),
     radial-gradient(circle, #7d2ae8 20%, transparent 20%),
     radial-gradient(circle, transparent 10%, #40a9ff 15%, transparent 20%),
