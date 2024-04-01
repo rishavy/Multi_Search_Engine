@@ -1,15 +1,15 @@
 /* Font Family */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap'); */
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-    background-color: aliceblue;
+    background-color: #eee;
     padding: 0 20px;
 }
 
@@ -70,6 +70,8 @@ h1{
     transform: translateX(-50%);
     z-index: -1000;
     background-repeat: no-repeat;
+    visibility: hidden; 
+    /* hiden hh    ^ */
 }
 .btn-animation::before{
     top: -25%;
@@ -179,7 +181,8 @@ h1{
 
 /* Resuls output hover effect */
 .result:hover{
-    box-shadow: 0 7px 29px 0 #64646f33;
+    box-shadow: 0 7px 29px 0 #0000003d;
+    /* box-shadow: 0 7px 29px 0 #64646f33; */
 }
 
 /* Resuls output title styling */
@@ -201,8 +204,11 @@ h1{
     display: inline-block;
     padding: 12px;
     width: 100%;
-    background-color: #5c6bc0;
-    color: #fff;
+    /* background-color: #5c6bc0; */
+    background-color: transparent;
+    color: #5c6bc0;
+    border: 1px solid #313131;
+    /* color: #fff; */
     text-decoration: none;
     text-align: center;
     font-weight: 700;
@@ -213,4 +219,6 @@ h1{
 /* Resuls output refral link hover effect */
 .result a:hover{
     background-color: #3949ab;
+    color: #fff;
+    border: none;
 }

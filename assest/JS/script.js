@@ -2,9 +2,9 @@
 
 // Btns Animation script
 document.addEventListener("DOMContentLoaded", function() {
-    const buttons = document.querySelectorAll(".btn-animation");
+    const animatebuttons = document.querySelectorAll(".btn-animation");
 
-    buttons.forEach(button => {
+    animatebuttons.forEach(button => {
         button.addEventListener("click", (e) => {
             e.preventDefault();
             button.classList.add("animate");
