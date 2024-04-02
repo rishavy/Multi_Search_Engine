@@ -14,3 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+// gggg
+const apiKey = 'AIzaSyCDHeeL9vrctoNnD_3SVV_bqXHvo60ysy0';
+    const cx = 'c10187e22a55b452b';

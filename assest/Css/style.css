@@ -1,6 +1,3 @@
-/* Font Family */
-/* @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap'); */
-
 *{
     margin: 0;
     padding: 0;
@@ -9,8 +6,42 @@
 }
 
 body{
-    background-color: #eee;
-    padding: 0 20px;
+    background-color: #f1f1f1;
+}
+
+/* Navbar Styling */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    padding: 2px 100px;
+    background-color: #313131;
+}
+.navbar .logo h1{
+    color: #fff;
+    /* color: rebeccapurple; */
+    font-size: 25px;
+    margin-top: 8px;
+}
+.navbar .logo h1>img{
+    width: 25px;
+    height: 25px;
+}
+.navbar .nav-options button{
+    padding: 5px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    outline: none;
+    border: 1px solid;
+}
+.nav-options #language{
+    padding: 5px 10px;
+    border-radius: 8px 0;
+    font-weight: 600;
+}
+.nav-options option{
+    font-size: 15px;
 }
 
 /* Main container styling */
@@ -18,7 +49,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    height: 80vh;
     margin-top: 20px;
 }
 
@@ -30,12 +62,18 @@ header{
 }
 
 /* Tittle styling */
+
 h1{
-    color: #00b7ff;
+    color: black;
+    /* color: #8f05aa; */
+    /* color: #00b7ff; */
     font-size: 42px;
-    text-transform: uppercase;
     text-align: center;
     margin-bottom: 16px;
+}
+h1>img{
+    height: 40px;
+    width: 40px;
 }
 
 /* Search Btns styling */
@@ -187,27 +225,29 @@ h1{
 
 /* Resuls output title styling */
 .result h3{
-    color: #616161;
-    font-size: 28px;
+    color: #000;
+    /* color: #616161; */
+    font-size: 25px;
     margin-bottom: 16px;
 }
 
 /* Resuls output description styling */
 .result p{
     color: #313131;
-    font-size: 18px;
+    font-size: 15px;
     margin-bottom: 16px;
 }
 
 /* Resuls output refral link styling */
 .result a{
     display: inline-block;
-    padding: 12px;
+    padding: 5px;
     width: 100%;
     /* background-color: #5c6bc0; */
     background-color: transparent;
-    color: #5c6bc0;
-    border: 1px solid #313131;
+    /* color: #5c6bc0; */
+    color: blue;
+    /* border: 1px solid #313131; */
     /* color: #fff; */
     text-decoration: none;
     text-align: center;
@@ -221,4 +261,87 @@ h1{
     background-color: #3949ab;
     color: #fff;
     border: none;
+}
+
+
+/* -------------  dark theam ------------ */
+
+/* .theam{
+    background-color: black;
+} */
+
+
+/* footer styling */
+
+.footer {
+    background-color: #313131;
+    color: #fff;
+    padding: 9px 30px;
+}
+
+.f-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-links ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ccc;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-social ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-social ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer-social ul li a:hover {
+    color: #ccc;
 }
