@@ -228,15 +228,14 @@ h1>img{
 /* Resuls output title styling */
 .result h3{
     color: #000;
-    /* color: #616161; */
     font-size: 25px;
     margin-bottom: 16px;
 }
 
 /* Resuls output description styling */
 .result p{
-    color: #313131;
-    font-size: 15px;
+    color: #000;
+    font-size: 16px;
     margin-bottom: 16px;
 }
 
@@ -265,13 +264,10 @@ h1>img{
     border: none;
 }
 
-
-/* -------------  dark theam ------------ */
-
-/* .theam{
-    background-color: black;
-} */
-
+.result img{
+    width: 20px;
+    height: 20px;
+}
 
 /* footer styling */
 
@@ -347,4 +343,37 @@ h1>img{
 
 .footer-social ul li a:hover {
     color: #ccc;
+}
+
+/* -------------  dark theam ------------ */
+
+.theam button{
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+.dark-mode h1{
+    color: #ffffff;
+}
+
+.dark-mode .result:hover{
+    box-shadow: 0 7px 29px 0 #ffffff65;
+}
+.dark-mode .result>h3{
+    color: white;
+}
+.dark-mode .result>a{
+    color: #008cff;
+}
+.dark-mode .result>a:hover{
+    color: #fff;
+}
+.dark-mode p{
+    color: #fff;
 }

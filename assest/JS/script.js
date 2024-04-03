@@ -15,7 +15,40 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// -----------------  Dark mode -----------------------
 
-// gggg
-const apiKey = 'AIzaSyCDHeeL9vrctoNnD_3SVV_bqXHvo60ysy0';
-    const cx = 'c10187e22a55b452b';
+// Get the theme button element
+const themeBtn = document.querySelector('.theam');
+
+// Add click event listener to the theme button
+themeBtn.addEventListener('click', function() {
+    // Toggle dark mode class on the body
+    document.body.classList.toggle('dark-mode');
+
+    // Toggle moon/sun icon
+    if (document.body.classList.contains('dark-mode')) {
+        // If dark mode is enabled, change theme button to sun icon
+        themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
+        // If light mode is enabled, change theme button to moon icon
+        themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+});
+
+// Check local storage for theme preference
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme) {
+    document.body.classList.add(currentTheme);
+    if (currentTheme === 'dark-mode') {
+        themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+}
+
+// Save theme preference to local storage
+themeBtn.addEventListener('click', function() {
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark-mode');
+    } else {
+        localStorage.setItem('theme', '');
+    }
+});
