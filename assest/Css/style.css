@@ -389,7 +389,7 @@ h1>img{
 }
 
 .dark-mode .result:hover{
-    box-shadow: 0 7px 29px 0 #ffffff65;
+    box-shadow: 0 7px 29px 0 #ffffff28;
 }
 .dark-mode .result>h3{
     color: white;
@@ -398,7 +398,8 @@ h1>img{
     color: #008cff;
 }
 .dark-mode .result a:hover{
-    color: #fff;
+    color: #eee;
+    background-color: #3e50b3;
 }
 .dark-mode p{
     color: #ccc;
