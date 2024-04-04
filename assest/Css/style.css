@@ -6,8 +6,10 @@
 }
 
 body{
-    background-image: linear-gradient(90deg, #ffd0d0, #fc9e32d3);
-    /* background-color: #f1f1f1;*/
+    background-image: linear-gradient(90deg, #dfdcff, #ffe5d6);
+    /* background-image: linear-gradient(90deg, #ffd0d0, #fc9e32d3); */
+    background-color: #dfdcff;
+    /* background-color: #f1f1f1; */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -68,7 +70,7 @@ header{
 /* Tittle styling */
 
 h1{
-    color: black;
+    color: #464646;
     /* color: #8f05aa; */
     /* color: #00b7ff; */
     font-size: 42px;
@@ -192,6 +194,7 @@ h1>img{
     border-radius: 7px;
     width: 100%;
     overflow: hidden;
+    border-radius: 25px;
     max-width: 720px;
     margin-bottom: 16px;
     transition: all 0.3s ease;
@@ -205,7 +208,7 @@ h1>img{
     outline: none;
     border: none;
     padding: 16px;
-    border-radius: 12px;
+    border-radius: 25px;
     width: 100%;
     font-size: 15px;
     transition: all 0.3s ease;
@@ -218,6 +221,7 @@ h1>img{
 
 .search-box:focus-within{
     box-shadow: 0px 7px 29px 0px #64646f33;
+    /* box-shadow: 0px 7px 29px 0px #64646f33; */
     transform: translateY(-3px);
 }
 

@@ -40,7 +40,7 @@
 
             <!-- Search option buttons -->
             <div class="search-btns">
-                <button class="google-search-btn btn-animation" >Search</button>
+                <button class="google-search-btn btn-animation">Search</button>
                 <button class="wikipedia-search-btn btn-animation">Wikipedia</button>
                 <button class="gemini-search-btn btn-animation">Gemini</button>
             </div>
@@ -97,6 +97,9 @@
         const genAI = new GoogleGenerativeAI(API_KEY);
 
         async function run() {
+
+            document.querySelector(".results").innerHTML = '';
+
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
         let userInput = document.querySelector('input[type="search"]').value;
