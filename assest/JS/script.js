@@ -52,3 +52,39 @@ themeBtn.addEventListener('click', function() {
         localStorage.setItem('theme', '');
     }
 });
+
+// ---------------------------------------------
+//  voice to text 
+
+// Function to handle speech recognition
+function startSpeechRecognition() {
+    // Create a new SpeechRecognition object
+    const recognition = new window.webkitSpeechRecognition(); // For Chrome
+    recognition.lang = 'en-US'; // Set language to English (United States)
+
+    // Start speech recognition
+    recognition.start();
+
+    // Event listener for when speech is recognized
+    recognition.onresult = function(event) {
+        const transcript = event.results[0][0].transcript;
+        // Insert the transcribed text into the search input field
+        document.querySelector('input[type="search"]').value = transcript;
+    };
+
+    // Event listener for errors
+    recognition.onerror = function(event) {
+        console.error('Speech recognition error:', event.error);
+    };
+}
+
+// Event listener for microphone icon click
+document.querySelector('input[type="search"]').addEventListener('click', function(event) {
+    // Check if the click was on the microphone icon
+    const micIconClicked = event.clientX > this.offsetWidth - 30; // Adjust as needed
+
+    // If the microphone icon was clicked, start speech recognition
+    if (micIconClicked) {
+        startSpeechRecognition();
+    }
+});

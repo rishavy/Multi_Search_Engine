@@ -207,6 +207,10 @@ h1>img{
     font-size: 15px;
     transition: all 0.3s ease;
 }
+/* pointer */
+.pointer-cursor {
+    cursor: pointer;
+}
 
 .search-box:focus-within{
     box-shadow: 0px 7px 29px 0px #64646f33;
