@@ -81,13 +81,52 @@
     
     </div>
 
-    <!-- This is the ohher more facts js link -->
+    <!-- This is the Gemini search js link -->
+    <script type="importmap">
+        {
+            "imports": {
+                "@google/generative-ai": "https://esm.run/@google/generative-ai"
+            }
+        }
+    </script>
+    <script type="module">
+        import { GoogleGenerativeAI } from "@google/generative-ai";
+        const API_KEY = "AIzaSyAWGpTWZRDqJ7hcrD6-tH1fnRfee_e5HM0";
+
+        document.querySelector(".gemini-search-btn").addEventListener("click", run);
+        const genAI = new GoogleGenerativeAI(API_KEY);
+
+        async function run() {
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+        let userInput = document.querySelector('input[type="search"]').value;
+        let userMessageDisplay = document.createElement("div");
+        userMessageDisplay.className = "user-msg";
+        userMessageDisplay.textContent = `User  :  ${userInput}`;
+        document.querySelector(".results").appendChild(userMessageDisplay);
+
+        const prompt = userInput;
+
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        const text = await response.text();
+        console.log(text);
+
+        let message = document.createElement("div");
+        message.className = "bot-msg";
+        message.textContent = `Gemini :  ${text}`;
+                                            
+        document.querySelector(".results").appendChild(message);
+    }
+    </script>
+    
+    
+
+      <!-- This is the ohher more facts js link -->
     <script src="./assest/JS/script.js"></script>
     <!-- This is the Google search js link -->
     <script src="./assest/JS/google-btn.js"></script>
     <!-- This is the Wikipedia search js link -->
     <script src="./assest/JS/wiki-btn.js"></script>
-    <!-- This is the Gemini search js link -->
-    <!-- <script src="./assest/JS/gemini-btn.js"></script> -->
 </body>
 </html>

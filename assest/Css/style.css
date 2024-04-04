@@ -6,8 +6,8 @@
 }
 
 body{
-    background-image: linear-gradient(90deg, #ffc2c2, #bdbdffd3);
-    /* background-color: #f1f1f1; #c2fffa*/
+    background-image: linear-gradient(90deg, #ffd0d0, #fc9e32d3);
+    /* background-color: #f1f1f1;*/
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -100,9 +100,11 @@ h1>img{
     font-size: 15px;
     font-weight: 600;
     transition: all 0.2s ease;
+    margin-bottom: 10px;
 }
 .btn-animation:hover{
     background-color: #0072cf;
+    box-shadow: 0 7px 10px 0 #005499;
 }
 
 .btn-animation:active{
@@ -359,6 +361,33 @@ h1>img{
 .footer-social ul li a:hover {
     color: #ccc;
 }
+/* ----------------  gemini output ----------- */
+.results {
+    display: flex; 
+    flex-direction: column;
+    margin: auto;
+    font-size: 20px;
+  }
+  
+  .user-msg {
+    background-color: #ffffff8f; 
+    padding: 0.5em 1em; 
+    border-radius: 5px; 
+    margin-bottom: 0.5em;
+    color: black; 
+  }
+  
+  .bot-msg {
+    background-color: #ffffffbe; 
+    padding: 10px; 
+    padding-right: 20px;
+    border-radius: 5px; 
+    margin-bottom: 0.5em; 
+    color: black;
+    line-height: 20px;
+    text-align: left;
+  }
+
 
 /* -------------  dark theam ------------ */
 
@@ -392,7 +421,7 @@ h1>img{
     box-shadow: 0 7px 29px 0 #ffffff28;
 }
 .dark-mode .result>h3{
-    color: white;
+    color: #f0f0f0;
 }
 .dark-mode .result a{
     color: #008cff;
@@ -403,4 +432,61 @@ h1>img{
 }
 .dark-mode p{
     color: #ccc;
+}
+.dark-mode .user-msg{
+    background-color: #696969b2;
+    color: #f0f0f0;
+}
+.dark-mode .bot-msg{
+    background-color: #525252ef;
+    color: #eee;
+}
+
+
+/* -------------------------------------------------- */
+/* @media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px; 
+    }
+    .navbar {
+        padding: 5px 20px; 
+    }
+    .nav-options button {
+        padding: 5px 10px;
+    }
+    .search-btns {
+        gap: 20px; 
+    }
+    .container {
+        padding: 0 10px; 
+    }
+    header {
+        margin-bottom: 10px; 
+    }
+    h1 {
+        font-size: 32px; 
+    }
+    .search-box {
+        max-width: 90%; 
+    }
+    .result {
+        padding: 12px; 
+    }
+} */
+
+@media only screen and (max-width: 414px) {
+    .search-btns{
+        gap: 10px;
+    }
+    .footer{
+        padding: 10px;
+        font-size: 10px;
+    }
+    .footer img{
+        width: 25px;
+        height: 25px;
+    }
+    /* .footer-social{
+        display: flex;
+    } */
 }

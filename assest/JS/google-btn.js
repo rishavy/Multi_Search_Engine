@@ -1,10 +1,8 @@
-// Function to perform Google search
 function performGoogleSearch(query) {
-  // API key and Custom Search Engine ID
+  // API key
   const apiKey = 'AIzaSyCDHeeL9vrctoNnD_3SVV_bqXHvo60ysy0';
   const cx = 'c10187e22a55b452b';
   
-  // URL for Google Custom Search JSON API
   const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`;
 
   // Fetching data from Google Custom Search API
